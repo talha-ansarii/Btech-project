@@ -1,0 +1,9 @@
+# Colab and Kaggle already have torch, torchvision, numpy, scipy, pillow and h5py.
+torch>=2.1
+torchvision
+timm>=0.9
+numpy
+scipy
+h5py
+pillow
+scikit-learn
