@@ -1,0 +1,6 @@
+run,mode,subset,n_labelled,seed,iters,mIoU,pixel_acc,mean_acc,minutes
+r2-cdiv10_rgbd_s2,rgbd,r2-cdiv_frac0.10_seed2,80,2,4000,20.33,55.96,29.17,27.0
+r2-entropy10_rgbd_s0,rgbd,r2-entropy_frac0.10_seed0,80,0,4000,22.13,55.54,31.62,26.2
+r2-entropy10_rgbd_s1,rgbd,r2-entropy_frac0.10_seed1,80,1,4000,19.57,54.78,28.31,26.1
+r2-entropy10_rgbd_s2,rgbd,r2-entropy_frac0.10_seed2,80,2,4000,20.77,54.56,30.38,26.3
+r2-coreset10_rgbd_s0,rgbd,r2-coreset_frac0.10_seed0,80,0,4000,20.29,55.36,29.07,26.5

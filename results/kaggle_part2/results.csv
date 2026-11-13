@@ -1,0 +1,6 @@
+run,mode,subset,n_labelled,seed,iters,mIoU,pixel_acc,mean_acc,minutes
+r2-coreset10_rgbd_s1,rgbd,r2-coreset_frac0.10_seed1,80,1,4000,21.31,55.28,30.61,27.5
+r2-coreset10_rgbd_s2,rgbd,r2-coreset_frac0.10_seed2,80,2,4000,19.57,54.26,28.12,26.3
+r2-mcomp10_rgbd_s0,rgbd,r2-mcomp_frac0.10_seed0,80,0,4000,20.26,54.68,29.29,26.1
+r2-mcomp10_rgbd_s1,rgbd,r2-mcomp_frac0.10_seed1,80,1,4000,20.35,55.96,29.55,26.0
+r2-mcomp10_rgbd_s2,rgbd,r2-mcomp_frac0.10_seed2,80,2,4000,21.87,55.44,31.26,26.3
