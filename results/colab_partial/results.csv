@@ -1,0 +1,9 @@
+run,mode,subset,n_labelled,seed,iters,mIoU,pixel_acc,mean_acc
+cdiv5_rgbd_s0,rgbd,cdiv_frac0.05_seed0,40,0,4000,15.06,48.93,23.24
+cdiv5_rgbd_s1,rgbd,cdiv_frac0.05_seed1,40,1,4000,15.65,51.34,23.70
+cdiv5_rgbd_s2,rgbd,cdiv_frac0.05_seed2,40,2,4000,14.24,48.94,21.32
+kmeans5_rgbd_s0,rgbd,kmeans_frac0.05_seed0,40,0,4000,17.04,51.80,26.07
+kmeans5_rgbd_s1,rgbd,kmeans_frac0.05_seed1,40,1,4000,16.98,51.57,25.09
+kmeans5_rgbd_s2,rgbd,kmeans_frac0.05_seed2,40,2,4000,15.92,50.36,23.70
+r2-cdiv10_rgbd_s0,rgbd,r2-cdiv_frac0.10_seed0,80,0,4000,20.86,55.95,30.24
+r2-cdiv10_rgbd_s1,rgbd,r2-cdiv_frac0.10_seed1,80,1,4000,19.94,55.15,28.58
