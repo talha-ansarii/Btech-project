@@ -28,8 +28,8 @@ present, class entropy of each chosen set.
 | part | runs | contents | about | status |
 |---|---|---|---|---|
 | 1 | 15 | cover-rgbd 5% and 10%, kmeans-rgbd 5% and 10%, kmeans 10% | 5 h | done 2026-11-14, see diversity_part1/ |
-| 2 | 18 | random rerun 5% and 10%, typiclust 5% and 10%, cover-rgb 5%, kmeans-ctb 5% | 6 h | next |
-| 3 | 9 | 25% budget (199 images): random, kmeans, cover-rgbd | 3.5 h | after part 2 |
+| 2 | 18 | random rerun 5% and 10%, typiclust 5% and 10%, cover-rgb 5%, kmeans-ctb 5% | 5.6 h | done 2026-11-14, see diversity_part2/ |
+| 3 | 9 | 25% budget (199 images): random, kmeans, cover-rgbd | 3.5 h | next |
 
 Two runs train at a time on the T4 x2, and each takes 36 to 40 minutes that way (not 26: the two runs share the CPUs).
 Parts 1 to 3 total about 15 GPU hours of Kaggle's 30 h weekly quota.
