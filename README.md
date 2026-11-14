@@ -177,3 +177,15 @@ python run_selection.py --data data/fake --out runs_t --splits-dir splits_t --jo
 * S. Gupta, P. Arbeláez, J. Malik. Perceptual Organization and Recognition of Indoor Scenes from RGB-D Images. CVPR 2013 (the 40 classes).
 * O. Sener, S. Savarese. Active Learning for Convolutional Neural Networks: A Core-Set Approach. ICLR 2018 (coreset baseline).
 * D. Seichter, M. Köhler, B. Lewandowski, T. Wengefeld, H.-M. Gross. Efficient RGB-D Semantic Segmentation for Indoor Scene Analysis. ICRA 2021 (ESANet).
+
+## Step 5: diversity-led selection (2026-11-13)
+
+C alone did not help, so the method is now label-free diversity for RGB-D. New files:
+
+| file | what it does |
+|---|---|
+| `features_rgbd.py` | ImageNet ResNet-34 features of the colour image and of surface normals from depth (global and 6x8 regions). |
+| `select_subsets.py` | New methods `typiclust`, `kmeans-rgbd`, `cover-rgbd`, `cover-rgb`, `kmeans-ctb` (pass `--rgbd-feats`). |
+| `analyze_splits.py` | Class coverage of each chosen set, from the labels (analysis only). |
+| `kaggle/diversity_kaggle.ipynb` | Runs everything on Kaggle T4 x2, two runs at a time. |
+| `results/diversity_plan.md` | The methods, the 27 runs, and which comparison proves which claim. |
