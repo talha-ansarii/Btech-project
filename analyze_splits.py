@@ -36,7 +36,7 @@ def stats(H, idx, rare):
     present = h > 0
     p = h[present] / h.sum()
     ent = float(-(p * np.log(p)).sum() / np.log((H.sum(0) > 0).sum()))
-    return int(present.sum()), int(present[rare].sum()), ent
+    return int(present.sum()), int(present[rare].sum()), ent, float(100 * h[rare].sum() / h.sum())
 
 
 def main():
@@ -56,12 +56,12 @@ def main():
             with open(f) as fh:
                 idx = json.load(fh)["indices"]
             groups[(float(m[2]), m[1])].append(stats(H, idx, rare))
-    lines = ["| labels | method | seeds | classes present (of 40) | rare classes present (of 20) | class entropy |",
-             "|---|---|---|---|---|---|"]
+    lines = ["| labels | method | seeds | classes present (of 40) | rare classes present (of 20) | class entropy | rare-class pixels (%) |",
+             "|---|---|---|---|---|---|---|"]
     for (frac, method), v in sorted(groups.items()):
         a = np.array(v, np.float64)
         lines.append(f"| {frac * 100:.0f}% | {method} | {len(v)} | {a[:, 0].mean():.1f} | {a[:, 1].mean():.1f} | "
-                     f"{a[:, 2].mean():.3f} |")
+                     f"{a[:, 2].mean():.3f} | {a[:, 3].mean():.2f} |")
     print("\n".join(lines))
     if args.md:
         with open(args.md, "w") as fh:

@@ -1,7 +1,7 @@
 """Write the fixed random labelled subsets used by every experiment.
 
 For each seed we shuffle the 795 training images once and take the first 5% (40 images)
-and the first 10% (80 images). So the 10% set always contains the 5% set, which is what
+the first 10% (80 images) and the first 25% (199 images). So each larger set contains the smaller ones, which is what
 an active-learning round looks like (you keep what you already labelled and add more).
 
 Files: splits/random_frac0.05_seed0.json  ->  {"indices": [...], "fraction": 0.05, "seed": 0}
@@ -16,7 +16,7 @@ N_TRAIN = 795
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
-def main(seeds=(0, 1, 2), fractions=(0.05, 0.10)):
+def main(seeds=(0, 1, 2), fractions=(0.05, 0.10, 0.25)):
     os.makedirs(os.path.join(HERE, "splits"), exist_ok=True)
     for seed in seeds:
         perm = np.random.default_rng(seed).permutation(N_TRAIN)

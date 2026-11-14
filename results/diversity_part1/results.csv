@@ -1,0 +1,16 @@
+run,mode,subset,n_labelled,seed,iters,mIoU,pixel_acc,mean_acc,minutes
+cover-rgbd5_rgbd_s0,rgbd,cover-rgbd_frac0.05_seed0,40,0,4000,18.18,51.96,26.77,40.4
+cover-rgbd5_rgbd_s2,rgbd,cover-rgbd_frac0.05_seed2,40,2,4000,18.48,53.05,27.93,37.1
+kmeans-rgbd5_rgbd_s1,rgbd,kmeans-rgbd_frac0.05_seed1,40,1,4000,16.79,52.14,25.12,36.9
+cover-rgbd10_rgbd_s0,rgbd,cover-rgbd_frac0.10_seed0,80,0,4000,23.33,57.17,33.68,36.1
+cover-rgbd10_rgbd_s2,rgbd,cover-rgbd_frac0.10_seed2,80,2,4000,22.14,56.22,32.49,36.3
+kmeans-rgbd10_rgbd_s1,rgbd,kmeans-rgbd_frac0.10_seed1,80,1,4000,22.63,56.84,33.19,35.8
+kmeans10_rgbd_s0,rgbd,kmeans_frac0.10_seed0,80,0,4000,22.42,57.04,31.82,35.6
+kmeans10_rgbd_s2,rgbd,kmeans_frac0.10_seed2,80,2,4000,19.92,54.11,28.77,27.7
+cover-rgbd5_rgbd_s1,rgbd,cover-rgbd_frac0.05_seed1,40,1,4000,17.01,52.54,26.11,40.4
+kmeans-rgbd5_rgbd_s0,rgbd,kmeans-rgbd_frac0.05_seed0,40,0,4000,17.39,52.49,25.66,37.1
+kmeans-rgbd5_rgbd_s2,rgbd,kmeans-rgbd_frac0.05_seed2,40,2,4000,15.84,50.61,23.36,36.9
+cover-rgbd10_rgbd_s1,rgbd,cover-rgbd_frac0.10_seed1,80,1,4000,22.83,57.2,32.52,35.6
+kmeans-rgbd10_rgbd_s0,rgbd,kmeans-rgbd_frac0.10_seed0,80,0,4000,21.12,55.78,30.38,36.4
+kmeans-rgbd10_rgbd_s2,rgbd,kmeans-rgbd_frac0.10_seed2,80,2,4000,21.49,56.42,31.65,36.1
+kmeans10_rgbd_s1,rgbd,kmeans_frac0.10_seed1,80,1,4000,20.35,55.82,29.81,35.4

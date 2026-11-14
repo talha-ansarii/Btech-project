@@ -25,13 +25,15 @@ present, class entropy of each chosen set.
 
 ## Runs (RGB-D, 4000 iters, seeds 0-2, Kaggle notebook `kaggle/diversity_kaggle.ipynb`)
 
-| part | runs | contents | about |
-|---|---|---|---|
-| 1 | 15 | cover-rgbd 5% and 10%, kmeans-rgbd 5% and 10%, kmeans 10% | 4-5 h |
-| 2 | 12 | typiclust 5% and 10%, cover-rgb 5%, kmeans-ctb 5% | 3.5-4 h |
+| part | runs | contents | about | status |
+|---|---|---|---|---|
+| 1 | 15 | cover-rgbd 5% and 10%, kmeans-rgbd 5% and 10%, kmeans 10% | 5 h | done 2026-11-14, see diversity_part1/ |
+| 2 | 18 | random rerun 5% and 10%, typiclust 5% and 10%, cover-rgb 5%, kmeans-ctb 5% | 6 h | next |
+| 3 | 9 | 25% budget (199 images): random, kmeans, cover-rgbd | 3.5 h | after part 2 |
 
-27 runs in all, two at a time on the T4 x2. Both parts fit in one week of Kaggle GPU quota (30 h).
-Already done and reused: random 5%/10%, kmeans 5%, cdiv 5%, and the round-2 baselines at 10%.
+Two runs train at a time on the T4 x2, and each takes 36 to 40 minutes that way (not 26: the two runs share the CPUs).
+Parts 1 to 3 total about 15 GPU hours of Kaggle's 30 h weekly quota.
+The random 25% splits are nested in the existing 5% and 10% ones (make_splits.py, same permutation).
 
 ## What proves the claim
 
@@ -45,7 +47,8 @@ Already done and reused: random 5%/10%, kmeans 5%, cdiv 5%, and the round-2 base
 
 ## Decision after part 1
 
-* If cover-rgbd or kmeans-rgbd clearly beats random at both budgets: run part 2, then add seeds 3-4 for
-  random, kmeans and the winner at 5% (9 runs, about 2.5 h) so the main gap rests on 5 seeds.
+* Outcome: cover-rgbd beats random at both budgets (+2.8 at 5%, +2.0 at 10%, p < 0.05), but its lead over kmeans
+  (+1.2, +1.9) is not significant with 3 seeds. So after parts 2 and 3, add seeds 3-4 for random, kmeans and
+  cover-rgbd at 5% and 10% (12 runs, about 4 h).
 * If neither beats plain kmeans: kmeans becomes the method and the paper leans on the analysis
   (class coverage, the 10% result, and the C finding). Part 2 is still worth running for the typiclust baseline.
